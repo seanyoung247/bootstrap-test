@@ -45,11 +45,19 @@ body {
  {
     height: 100vh;
 
-    background: url("../images/whiskeybk.jpg") no-repeat bottom right fixed;
+    /*background-image: url("../images/whiskeybk.jpg");*/
+
+    background-image: url("../images/whiskeybk.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+   /* background: url("../images/whiskeybk.jpg") no-repeat bottom right fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size:cover;
-    background-size: cover;
+    background-size: cover;*/
 
     display: flex;
     align-items: center;
@@ -65,7 +73,7 @@ body {
      height: 100%;
      width: 100%;
       /* I know 8 digit hex isn't supported in all browsers,
-             but I'm just playing around and it' is supported in mine. */
+             but I'm just playing around and it is supported in mine. */
      background-color: #00000088; /*rgba(0,0,0,0.5);*/
  }
 
