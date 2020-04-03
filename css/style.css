@@ -1,3 +1,15 @@
+:root {
+    --light-background-color:   #FFD70D;
+    --light-background-selected:#CCAC0A;
+    --dark-background-color:    #FF7B0A;
+    --dark-background-selected: #CC6206;
+    --light-complimentary-color:#19DAFF;
+    --dark-complimentary-color: #140AFF;
+    --complimentary-color:      #267DFF;
+    --light-forground-color:    white;
+    --dark-forground-color:     #444;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
 }
@@ -5,8 +17,8 @@ body {
 .container-wrapper {}
 
 .container-wrapper--red {
-    color: white;
-    background-color: #f05f40;
+    color: var(--light-forground-text-color);
+    background-color: var(--dark-background-color);
 }
 
 .alert-container .col-12 {
@@ -18,8 +30,15 @@ body {
     border-radius: 0;
     margin-bottom: 0;
     padding: 5px 15px;
-    background-color:  #eec802;
-    border-color: #eec802;
+    background-color: var(--light-background-color);
+    border-color: var(--light-background-color);
+}
+
+.site-wide-alert a {
+    color: var(--light-forground-color);
+    background-color: var(--dark-background-color);
+    border-radius: 13px;
+    padding: 5px;
 }
 
  .callout-container
@@ -45,12 +64,12 @@ body {
      left: 0;
      height: 100%;
      width: 100%;
-     background-color: rgba(0,0,0,0.5);
+      /* I know 8 digit hex isn't supported in all browsers,
+             but I'm just playing around and it' is supported in mine. */
+     background-color: #00000088; /*rgba(0,0,0,0.5);*/
  }
 
- .quotes-container {
-
- }
+ .quotes-container {}
 
  .features-container {}
 
@@ -76,15 +95,15 @@ body {
     width: 75px;
     height: 5px;
     border: 0;
-    background-color: #444;
+    background-color: var(--dark-forground-color);
 }
 
 .block-divider--orange {
-    background-color: #f05f40;
+    background-color: var(--dark-background-color);
 }
 
 .block-divider--white {
-    background-color: #FFF;
+    background-color: var(--light-forground-color);
 }
 
 .block-divider--short {
@@ -111,7 +130,7 @@ body {
     margin-bottom: 0;
     border: 0;
     width: 100%;
-    background-color: rgba(0,0,0,0.25);
+    background-color: #00000088; /*rgba(0,0,0,0.25);*/
 }
 
 .navbar .navbar-toggler {
@@ -133,10 +152,9 @@ body {
 }
 
 .jumbotron h1 {
-    color: white;
     font-weight: bold;
     margin-bottom: 30px;
-    color: white;
+    color: var(--light-forground-color);
 
     text-shadow:
         -1px -1px 0 #000,
@@ -180,17 +198,17 @@ body {
 }
 
 .btn--red {
-    color: white;
-    background-color: #f05f40;
-    border-color: #f05f40;
+    color: var(--light-forground-color);
+    background-color: var(--dark-background-color);
+    border-color: var(--dark-background-color);
 }
 
 .btn--red:hover,
 .btn--red:active,
 .btn--red:focus,
 .btn--red:active:focus {
-    background-color: #df4929;
-    border-color: #df4929;
+    background-color: var(--dark-background-selected);
+    border-color: var(--dark-background-selected);
 }
 
 .feature {
@@ -205,11 +223,11 @@ body {
 }
 
 .feature .btn {
-    background-color: white;
-    border-color: white;
+    background-color: var(--light-forground-color);
+    border-color: var(--light-forground-color);
     border-radius: 15px;
     min-width: 100px;
     font-weight: bold;
     margin-top: 10px;
-    color:#f05f40;
+    color: var(--dark-background-color);
 }
