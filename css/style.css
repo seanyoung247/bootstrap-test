@@ -1,7 +1,7 @@
 :root {
     --light-background-color:   #FFD70D;
     --light-background-selected:#CCAC0A;
-    --dark-background-color:    #FF7B0A;
+    --dark-background-color:    #E89B0C;
     --dark-background-selected: #CC6206;
     --light-complimentary-color:#19DAFF;
     --dark-complimentary-color: #140AFF;
@@ -45,19 +45,8 @@ body {
  {
     height: 100vh;
 
-    /*background-image: url("../images/whiskeybk.jpg");*/
-
-    background-image: url("../images/whiskeybk.jpg");
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: url("../images/whiskeybk.jpg") center no-repeat fixed;
     background-size: cover;
-
-   /* background: url("../images/whiskeybk.jpg") no-repeat bottom right fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size:cover;
-    background-size: cover;*/
 
     display: flex;
     align-items: center;
@@ -79,7 +68,9 @@ body {
 
  .quotes-container {}
 
- .features-container {}
+ .features-container {
+     color: var(--light-forground-color);
+ }
 
 /* Page headers */
 .page-header {
@@ -163,23 +154,11 @@ body {
     font-weight: bold;
     margin-bottom: 30px;
     color: var(--light-forground-color);
-
-    text-shadow:
-        -1px -1px 0 #000,
-         1px -1px 0 #000,
-        -1px  1px 0 #000,
-         1px  1px 0 #000;
 }
 
 .jumbotron .lead {
     color: #a7a7a7;
     margin: 25px 0;
-
-    text-shadow:
-        -1px -1px 0 #000,
-         1px -1px 0 #000,
-        -1px  1px 0 #000,
-         1px  1px 0 #000;
 }
 
 .jumbotron p > strong > mark {
@@ -190,12 +169,19 @@ body {
     font-size: 60%;
     font-style: italic;
     color: #d0d0d0;
+}
 
+/* text effects */
+.outline-text {
     text-shadow:
         -1px -1px 0 #000,
          1px -1px 0 #000,
         -1px  1px 0 #000,
          1px  1px 0 #000;
+}
+
+.bold-text {
+    font-weight: bold;
 }
 
 /* Buttons */
